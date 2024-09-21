@@ -1,3 +1,3 @@
-# MTLKS NixOS configuration
+# MTLKS NixOS Config
 
 work in progress
