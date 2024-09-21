@@ -11,6 +11,11 @@ in {
       enable = true;
       userName = "MTLKS";
       userEmail = "43807318+MTLKS@users.noreply.github.com";
+      extraConfig = {
+        init = {
+          defaultBranch = "main";
+        };
+      };
     };
   };
 }
