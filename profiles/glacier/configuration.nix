@@ -14,6 +14,13 @@
 
     nixpkgs.config.allowUnfree = true;
 
+    fonts.packages = with pkgs; [
+      (nerdfonts.override { fonts = [
+        "CommitMono"
+      ];})
+      source-han-mono
+    ];
+
     services.xserver = {
       enable = true;
       windowManager.i3.enable = true;

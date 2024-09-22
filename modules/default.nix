@@ -5,6 +5,7 @@
 
     imports = [
         ./i3
+        ./alacritty
         ./firefox
         ./git
     ];

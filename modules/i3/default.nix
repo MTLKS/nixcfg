@@ -16,6 +16,7 @@ in {
           inner = 10;
           outer = 5;
         };
+        terminal = "alacritty";
       };
     };
   };
