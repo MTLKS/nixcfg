@@ -16,18 +16,20 @@
       pkgs = inputs.nixpkgs.legacyPackages.${system};
       lib = nixpkgs.lib;
 
-      mkSystem = pkgs: system: hostname:
+      mkSystem = pkgs: system: hostname: profile:
         pkgs.lib.nixosSystem {
           system = system;
           modules = [
             ./hosts/${hostname}/configuration.nix
             ./hosts/${hostname}/hardware-configuration.nix
+            ./profiles/${profile}/configuration.nix
             inputs.home-manager.nixosModules.home-manager
             {
               home-manager = {
                 useUserPackages = true;
                 useGlobalPkgs = true;
                 extraSpecialArgs = { inherit inputs; };
+                backupFileExtension = "backup";
 
                 users.mtlks = ( ./users/mtlks.nix );
               };
@@ -38,7 +40,7 @@
     in
     {
       nixosConfigurations = {
-        glacier = mkSystem inputs.nixpkgs "x86_64-linux" "desktop";
+        glacier = mkSystem inputs.nixpkgs "x86_64-linux" "desktop" "glacier";
       };
     };
 }
