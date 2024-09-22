@@ -6,6 +6,7 @@
         i3.enable = true;
         alacritty.enable = true;
         firefox.enable = true;
+        fish.enable = true;
         git.enable = true;
     };
 }

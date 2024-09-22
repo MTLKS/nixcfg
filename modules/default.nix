@@ -7,6 +7,7 @@
         ./i3
         ./alacritty
         ./firefox
+        ./fish
         ./git
     ];
 }
