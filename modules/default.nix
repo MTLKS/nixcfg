@@ -4,7 +4,8 @@
     home.stateVersion = "23.11";
 
     imports = [
-        ./git
         ./i3
+        ./firefox
+        ./git
     ];
 }
