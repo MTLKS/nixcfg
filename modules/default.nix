@@ -9,5 +9,6 @@
         ./firefox
         ./fish
         ./git
+        ./rofi
     ];
 }

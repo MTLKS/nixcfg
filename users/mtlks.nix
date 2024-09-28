@@ -8,5 +8,6 @@
         firefox.enable = true;
         fish.enable = true;
         git.enable = true;
+        rofi.enable = true;
     };
 }
