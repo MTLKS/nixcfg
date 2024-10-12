@@ -9,5 +9,6 @@
         fish.enable = true;
         git.enable = true;
         rofi.enable = true;
+        vscode.enable = true;
     };
 }

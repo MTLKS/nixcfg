@@ -10,5 +10,6 @@
         ./fish
         ./git
         ./rofi
+        ./vscode
     ];
 }
