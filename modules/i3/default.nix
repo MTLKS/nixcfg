@@ -21,9 +21,14 @@ in {
         menu = menu;
         keybindings = lib.mkOptionDefault {
           "${mod}+space" = "exec ${menu}";
+          "Print" = "exec --no-startup-id maim --select | xclip -selection clipboard -t image/png";
         };
       };
     };
     services.picom.enable = true;
+    home.packages = with pkgs; [
+      maim
+      xclip
+    ];
   };
 }
