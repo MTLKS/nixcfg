@@ -23,7 +23,7 @@ in {
           size = 12;
           normal = {
             family = "Commit Mono Nerdfont";
-            style = "Regular";
+            style = "Bold";
           };
         };
 
