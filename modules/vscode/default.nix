@@ -17,9 +17,13 @@ in {
         "[nix]" = {
           "editor.tabSize" = 2;
         };
+        "debug.console.fontFamily" = "'CommitMono Nerd Font', monospace";
         "editor.fontFamily" = "'CommitMono Nerd Font', monospace";
+        "editor.fontWeight" = "bold";
         "editor.renderWhitespace" = "all";
         "terminal.integrated.defaultProfile.linux" = "fish";
+        "terminal.integrated.fontFamily" = "'CommitMono Nerd Font', monospace";
+        "terminal.integrated.fontWeightBold" = "bold";
         "window.titleBarStyle" = "custom";
         "workbench.colorTheme" = "Pitch Black";
         "workbench.colorCustomizations" = {
