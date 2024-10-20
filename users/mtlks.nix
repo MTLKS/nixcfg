@@ -8,6 +8,7 @@
         firefox.enable = true;
         fish.enable = true;
         git.enable = true;
+        libreoffice.enable = true;
         rofi.enable = true;
         vscode.enable = true;
     };

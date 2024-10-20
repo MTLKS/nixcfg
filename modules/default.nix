@@ -9,6 +9,7 @@
         ./firefox
         ./fish
         ./git
+        ./libreoffice
         ./rofi
         ./vscode
     ];
