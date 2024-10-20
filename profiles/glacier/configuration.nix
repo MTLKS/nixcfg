@@ -8,7 +8,7 @@
 
     users.users.mtlks = {
         isNormalUser = true;
-        extraGroups = [ "wheel" "networkmanager" "audio" ];
+        extraGroups = [ "wheel" "networkmanager" "audio" "docker" ];
         home = "/home/mtlks";
     };
 
@@ -29,4 +29,6 @@
     services.displayManager = {
       defaultSession = "none+i3";
     };
+
+    virtualisation.docker.enable = true;
 }
