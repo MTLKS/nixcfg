@@ -15,6 +15,18 @@ in {
           body = "eza --icons always $argv";
         };
 
+        ns = {
+          body = "nix-shell --command fish $argv";
+        };
+
+        nrs = {
+          body = "sudo nixos-rebuild switch --flake .#$argv";
+        };
+
+        nrt = {
+          body = "sudo nixos-rebuild test --flake .#$argv";
+        };
+
         fish_greeting = {
           body = "";
         };
