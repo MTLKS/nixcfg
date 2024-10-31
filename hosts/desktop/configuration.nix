@@ -29,5 +29,9 @@
         ntfs3g
     ];
 
+    hardware.opengl.enable = true;
+    hardware.nvidia.modesetting.enable = true;
+    hardware.nvidia.open = true;
+
     system.stateVersion = "23.11";
 }
