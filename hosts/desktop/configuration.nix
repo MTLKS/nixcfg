@@ -26,6 +26,7 @@
     environment.systemPackages = with pkgs; [
         git
         vim
+        ntfs3g
     ];
 
     system.stateVersion = "23.11";
