@@ -69,7 +69,7 @@ in {
           "Print" = "exec --no-startup-id maim --select | xclip -selection clipboard -t image/png";
         };
         startup = [
-          { command = "xrandr --output DP-1 --mode 1920x1080 --rate 60 --pos 0x0 --rotate left --scale 1.5x1.5 --output HDMI-0 --mode 3840x2160 --rate 120 --pos 1620x720 --primary --dpi 144 --scale 1x1 --output DP-3 --mode 1920x1080 --rate 60 --pos 5460x0 --rotate right --scale 1.5x1.5"; }
+          { command = "xrandr --output DP-1 --mode 1920x1080 --rate 60 --pos 0x0 --rotate left --scale 1.5x1.5 --output HDMI-0 --mode 3840x2160 --rate 120 --pos 1620x720 --primary --dpi 144 --scale 1x1 --output DP-3 --mode 1920x1080 --rate 60 --pos 5460x0 --rotate right --scale 1.5x1.5; sleep 5 && feh --bg-fill --no-xinerama ~/.background-image"; }
         ];
       };
       extraConfig = ''
@@ -77,6 +77,10 @@ in {
         client.focused_inactive #343331 #343331 #cecdc3 #343331 #343331
         client.unfocused        #282726 #282726 #cecdc3 #282726 #282726
       '';
+    };
+
+    programs = {
+      feh.enable = true;
     };
 
     services = {
