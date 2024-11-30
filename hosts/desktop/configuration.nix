@@ -16,11 +16,15 @@
 
     networking.networkmanager.enable = true;
 
-    services.pipewire = {
-        enable = true;
-        alsa.enable = true;
-        alsa.support32Bit = true;
-        pulse.enable = true;
+    services = {
+        pipewire = {
+            enable = true;
+            alsa.enable = true;
+            alsa.support32Bit = true;
+            pulse.enable = true;
+        };
+
+        blueman.enable = true;
     };
 
     environment.systemPackages = with pkgs; [
@@ -29,9 +33,13 @@
         ntfs3g
     ];
 
-    hardware.graphics.enable = true;
-    hardware.nvidia.modesetting.enable = true;
-    hardware.nvidia.open = true;
+    hardware = {
+        bluetooth.enable = true;
+        bluetooth.powerOnBoot = true;
+        graphics.enable = true;
+        nvidia.modesetting.enable = true;
+        nvidia.open = true;
+    };
 
     system.stateVersion = "23.11";
 }
