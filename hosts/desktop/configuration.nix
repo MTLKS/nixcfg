@@ -29,7 +29,7 @@
         ntfs3g
     ];
 
-    hardware.opengl.enable = true;
+    hardware.graphics.enable = true;
     hardware.nvidia.modesetting.enable = true;
     hardware.nvidia.open = true;
 
