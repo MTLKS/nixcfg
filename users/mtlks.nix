@@ -10,6 +10,7 @@
         git.enable = true;
         libreoffice.enable = true;
         rofi.enable = true;
+        vesktop.enable = true;
         vscode.enable = true;
     };
 }
