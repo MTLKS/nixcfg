@@ -18,6 +18,11 @@ sudo nixos-rebuild test --flake .#glacier
 sudo nixos-rebuild test --flake .#snowdrift
 ```
 
+Update flake
+```bash
+nix flake update
+```
+
 List system generations
 ```bash
 sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
