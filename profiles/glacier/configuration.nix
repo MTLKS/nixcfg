@@ -15,9 +15,7 @@
     nixpkgs.config.allowUnfree = true;
 
     fonts.packages = with pkgs; [
-      (nerdfonts.override { fonts = [
-        "CommitMono"
-      ];})
+      nerd-fonts.commit-mono
       source-han-mono
     ];
 
