@@ -16,7 +16,7 @@
       pkgs = inputs.nixpkgs.legacyPackages.${system};
       lib = nixpkgs.lib;
 
-      mkSystem = pkgs: system: hostname: profile:
+      mkSystem = pkgs: system: hostname: profile: user:
         pkgs.lib.nixosSystem {
           system = system;
           modules = [
@@ -31,7 +31,7 @@
                 extraSpecialArgs = { inherit inputs; };
                 backupFileExtension = "backup";
 
-                users.mtlks = ( ./users/mtlks.nix );
+                users.mtlks = ( ./users/${user}.nix );
               };
             }
           ];
@@ -40,9 +40,9 @@
     in
     {
       nixosConfigurations = {
-        glacier = mkSystem inputs.nixpkgs "x86_64-linux" "desktop" "glacier";
-        snowdrift = mkSystem inputs.nixpkgs "x86_64-linux" "laptop" "snowdrift";
-        permafrost = mkSystem inputs.nixpkgs "x86_64-linux" "homelab" "permafrost";
+        glacier = mkSystem inputs.nixpkgs "x86_64-linux" "desktop" "glacier" "mtlks";
+        snowdrift = mkSystem inputs.nixpkgs "x86_64-linux" "laptop" "snowdrift" "mtlks";
+        permafrost = mkSystem inputs.nixpkgs "x86_64-linux" "homelab" "permafrost" "permafrost";
       };
     };
 }
