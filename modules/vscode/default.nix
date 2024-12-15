@@ -8,9 +8,11 @@ in {
   config = mkIf cfg.enable {
     programs.vscode = {
       enable = true;
+      package = pkgs.vscode-fhs;
       extensions = with pkgs.vscode-extensions; [
         bbenoist.nix
         github.copilot
+        humao.rest-client
         viktorqvarfordt.vscode-pitch-black-theme
       ];
       userSettings = {
