@@ -9,7 +9,7 @@ in {
     programs.alacritty = {
       enable = true;
       settings = {
-        shell.program = "fish";
+        terminal.shell.program = "fish";
 
         window = {
           opacity = 0.9;
