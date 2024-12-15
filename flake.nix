@@ -42,6 +42,7 @@
       nixosConfigurations = {
         glacier = mkSystem inputs.nixpkgs "x86_64-linux" "desktop" "glacier";
         snowdrift = mkSystem inputs.nixpkgs "x86_64-linux" "laptop" "snowdrift";
+        permafrost = mkSystem inputs.nixpkgs "x86_64-linux" "homelab" "permafrost";
       };
     };
 }
