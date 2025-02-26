@@ -4,12 +4,13 @@
     home.stateVersion = "23.11";
 
     imports = [
-        ./i3
         ./alacritty
         ./firefox
         ./fish
         ./git
+        ./i3
         ./libreoffice
+        ./minecraft
         ./rofi
         ./vesktop
         ./vscode
