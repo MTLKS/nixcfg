@@ -12,7 +12,6 @@ in {
         terminal.shell.program = "fish";
 
         window = {
-          opacity = 0.9;
           padding = {
             x = 10;
             y = 10;
@@ -20,7 +19,7 @@ in {
         };
 
         font = {
-          size = 12;
+          size = 10;
           normal = {
             family = "Commit Mono Nerdfont";
             style = "Bold";
@@ -39,30 +38,30 @@ in {
 
         colors = {
           primary = {
-            background = "#0c0e0f";
-            foreground = "#edeff0";
+            background = "#100F0F";
+            foreground = "#E6E4D9";
           };
 
           normal = {
-            black   = "#232526";
-            red     = "#df5b61";
-            green   = "#78b892";
-            yellow  = "#de8f78";
-            blue    = "#6791c9";
-            magenta = "#bc83e3";
-            cyan    = "#67afc1";
-            white   = "#e4e6e7";
+            black   = "#100F0F";
+            red     = "#D14D41";
+            green   = "#879A39";
+            yellow  = "#D0A215";
+            blue    = "#4385BE";
+            magenta = "#CE5D97";
+            cyan    = "#3AA99F";
+            white   = "#CECDC3";
           };
 
           bright = {
-            black   = "#2c2e2f";
-            red     = "#e8646a";
-            green   = "#81c19b";
-            yellow  = "#e79881";
-            blue    = "#709ad2";
-            magenta = "#bc83e3";
-            cyan    = "#70b8ca";
-            white   = "#f2f4f5";
+            black   = "#282726";
+            red     = "#E8705F";
+            green   = "#A0AF54";
+            yellow  = "#DFB431";
+            blue    = "#66A0C8";
+            magenta = "#E47DA8";
+            cyan    = "#5ABDAC";
+            white   = "#E6E4D9";
           };
         };
       };
