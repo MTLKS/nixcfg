@@ -11,6 +11,7 @@
         ./i3
         ./libreoffice
         ./minecraft
+        ./polybar
         ./rofi
         ./vesktop
         ./vscode
