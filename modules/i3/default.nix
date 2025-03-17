@@ -24,6 +24,7 @@ in {
           inner = 10;
           outer = 5;
         };
+        bars = [];
         keybindings = {
           "${mod}+Return" = "exec ${terminal}";
           "${mod}+Escape" = "kill";
@@ -69,7 +70,10 @@ in {
           "Print" = "exec --no-startup-id maim --select | xclip -selection clipboard -t image/png";
         };
         startup = [
-          { command = "xrandr --output DP-1 --mode 1920x1080 --rate 60 --pos 0x0 --rotate left --scale 1.5x1.5 --output HDMI-0 --mode 3840x2160 --rate 120 --pos 1620x720 --primary --dpi 144 --scale 1x1 --output DP-3 --mode 1920x1080 --rate 60 --pos 5460x0 --rotate right --scale 1.5x1.5; sleep 5 && feh --bg-fill --no-xinerama ~/.background-image"; }
+          { command = "xrandr --output DP-1 --mode 1920x1080 --rate 60 --pos 0x0 --rotate left --scale 1.5x1.5 --output HDMI-0 --mode 3840x2160 --rate 120 --pos 1620x720 --primary --dpi 144 --scale 1x1 --output DP-3 --mode 1920x1080 --rate 60 --pos 5460x0 --rotate right --scale 1.5x1.5; sleep 1 && feh --bg-fill --no-xinerama ~/background-image"; }
+          { command = "polybar bar1"; }
+          { command = "polybar bar2"; }
+          { command = "polybar bar3"; }
         ];
       };
       extraConfig = ''
