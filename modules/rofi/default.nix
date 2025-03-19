@@ -8,6 +8,9 @@ in {
   config = mkIf cfg.enable {
     programs.rofi = {
       enable = true;
+      plugins = [
+        pkgs.rofi-calc
+      ];
       theme = ./theme.rasi;
     };
   };

@@ -29,6 +29,7 @@ in {
           "${mod}+Return" = "exec ${terminal}";
           "${mod}+Escape" = "kill";
           "${mod}+space" = "exec ${menu}";
+          "${mod}+Tab" = "exec rofi -show window";
 
           "${mod}+Left" = "focus left";
           "${mod}+Down" = "focus down";
@@ -40,9 +41,10 @@ in {
           "${mod}+Shift+Up" = "move up";
           "${mod}+Shift+Right" = "move right";
 
+          "${mod}+a" = "focus parent";
+          "${mod}+c" = "exec LC_MONETARY=ms_MY.utf8 rofi -show calc -modi calc -no-show-match -no-sort -no-persist-history -kb-accept-entry Control+Return -kb-accept-custom Return -calc-command \"echo -n '{result}' | xclip -selection clipboard\"";
           "${mod}+f" = "fullscreen toggle";
           "${mod}+q" = "floating toggle";
-          "${mod}+a" = "focus parent";
 
           "${mod}+1" = "workspace number 1";
           "${mod}+2" = "workspace number 2";
