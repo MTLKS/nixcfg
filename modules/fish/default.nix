@@ -20,11 +20,11 @@ in {
         };
 
         nrs = {
-          body = "sudo nixos-rebuild switch --flake .#$argv";
+          body = "sudo nixos-rebuild switch --flake /home/mtlks/nixcfg#$argv";
         };
 
         nrt = {
-          body = "sudo nixos-rebuild test --flake .#$argv";
+          body = "sudo nixos-rebuild test --flake /home/mtlks/nixcfg#$argv";
         };
 
         fish_greeting = {
