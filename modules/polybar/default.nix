@@ -42,7 +42,7 @@ in {
           "bar/bar1" = {
             "inherit" = "bar/main";
             "monitor" = "HDMI-0";
-            "modules-left" = "xworkspaces";
+            "modules-left" = "menu-power xworkspaces";
             "modules-center" = "xwindow";
             "modules-right" = "filesystem alsa xkeyboard memory cpu wlan eth date";
           };
@@ -154,6 +154,25 @@ in {
             "date" = "%Y-%m-%d ";
             "time" = "%H:%M:%S";
             "label" = "%{F#66A0C8}%date%%{F-} %time%";
+          };
+
+          "module/menu-power" = {
+            "type" = "custom/menu";
+            "label-open" = "󱄅";
+            "label-open-padding" = "1";
+            "label-close" = "󱄅";
+            "label-close-padding" = "1";
+
+            "expand-right" = "true";
+            "menu-0-0" = "󰐥";
+            "menu-0-0-padding" = "1";
+            "menu-0-0-exec" = "systemctl poweroff";
+            "menu-0-1" = "󰜉";
+            "menu-0-1-exec" = "systemctl reboot";
+            "menu-0-1-padding" = "1";
+            "menu-0-2" = "󰍃";
+            "menu-0-2-exec" = "i3-msg exit";
+            "menu-0-2-padding" = "1";
           };
 
           "settings" = {
