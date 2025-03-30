@@ -41,6 +41,9 @@ in {
           "${mod}+Shift+Up" = "move up";
           "${mod}+Shift+Right" = "move right";
 
+          "${mod}+Ctrl+Left" = "move workspace to output left";
+          "${mod}+Ctrl+Right" = "move workspace to output right";
+
           "${mod}+a" = "focus parent";
           "${mod}+c" = "exec LC_MONETARY=ms_MY.utf8 rofi -show calc -modi calc -no-show-match -no-sort -no-persist-history -kb-accept-entry Control+Return -kb-accept-custom Return -calc-command \"echo -n '{result}' | xclip -selection clipboard\"";
           "${mod}+f" = "fullscreen toggle";
