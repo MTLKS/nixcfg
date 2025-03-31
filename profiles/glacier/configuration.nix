@@ -22,6 +22,7 @@
 
     services.xserver = {
       enable = true;
+
       displayManager.lightdm = {
         enable = true;
         greeters.mini = {
@@ -51,8 +52,9 @@
           '';
         };
       };
-      windowManager.i3.enable = true;
       videoDrivers = ["nvidia"];
+      windowManager.i3.enable = true;
+      xkb.options = "caps:escape";
     };
 
     services.displayManager = {
