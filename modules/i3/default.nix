@@ -105,6 +105,7 @@ in {
     };
 
     home.packages = with pkgs; [
+      dconf #gtk
       maim
       xclip
     ];
