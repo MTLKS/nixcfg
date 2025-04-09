@@ -16,6 +16,8 @@
         timeout = 1;
     };
 
+    boot.kernelPackages = pkgs.linuxPackages_6_14;
+
     networking.networkmanager.enable = true;
 
     services = {
