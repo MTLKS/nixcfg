@@ -11,7 +11,9 @@
             enable = true;
             device = "/dev/sda";
             useOSProber = true;
+            timeoutStyle = "hidden";
         };
+        timeout = 1;
     };
 
     networking.networkmanager.enable = true;
