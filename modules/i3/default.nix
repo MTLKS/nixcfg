@@ -79,6 +79,7 @@ in {
           { command = "polybar bar1"; }
           { command = "polybar bar2"; }
           { command = "polybar bar3"; }
+          { command = "polybar laptop"; }
         ];
       };
       extraConfig = ''

@@ -47,6 +47,14 @@ in {
             "modules-right" = "filesystem alsa xkeyboard memory cpu wlan eth date";
           };
 
+          "bar/laptop" = {
+            "inherit" = "bar/main";
+            "monitor" = "eDP-1";
+            "modules-left" = "menu-power xworkspaces";
+            "modules-center" = "xwindow";
+            "modules-right" = "filesystem alsa xkeyboard memory cpu wlan eth date";
+          };
+
           "bar/bar2" = {
             "inherit" = "bar/main";
             "monitor" = "DP-1";
