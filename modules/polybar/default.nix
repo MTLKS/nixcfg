@@ -9,7 +9,7 @@ in {
     services = {
       polybar = {
         enable = true;
-        package = pkgs.polybar;
+        package = pkgs.polybarFull;
         config = {
           "colors" = {
             "background" = "#100F0F";
@@ -44,7 +44,7 @@ in {
             "monitor" = "HDMI-0";
             "modules-left" = "menu-power xworkspaces";
             "modules-center" = "xwindow";
-            "modules-right" = "filesystem alsa xkeyboard memory cpu wlan eth date";
+            "modules-right" = "filesystem pulseaudio xkeyboard memory cpu wlan eth date";
           };
 
           "bar/laptop" = {
@@ -52,7 +52,7 @@ in {
             "monitor" = "eDP-1";
             "modules-left" = "menu-power xworkspaces";
             "modules-center" = "xwindow";
-            "modules-right" = "filesystem alsa xkeyboard memory cpu wlan eth date";
+            "modules-right" = "filesystem pulseaudio xkeyboard memory cpu wlan eth date";
           };
 
           "bar/bar2" = {
@@ -100,13 +100,16 @@ in {
             "label-unmounted-foreground" = "\${colors.disabled}";
           };
 
-          "module/alsa" = {
-            "type" = "internal/alsa";
+          "module/pulseaudio" = {
+            "type" = "internal/pulseaudio";
+            "use-ui-max" = "false";
+            "interval" = "5";
             "format-volume-prefix" = "VOL ";
             "format-volume-prefix-foreground" = "\${colors.primary}";
             "format-volume" = "<label-volume>";
             "label-volume" = "%percentage%%";
             "label-muted" = "%{F#66A0C8}VOL%{F-} %{F#575653}MUTED%{F-}";
+            "click-right" = "pavucontrol";
           };
 
           "module/xkeyboard" = {
