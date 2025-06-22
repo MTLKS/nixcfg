@@ -23,6 +23,11 @@ Update flake
 nix flake update
 ```
 
+Update flake with GitHub token
+```bash
+nix flake update --option access-tokens "github.com=<token>"
+```
+
 List system generations
 ```bash
 sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
