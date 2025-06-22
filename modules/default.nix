@@ -5,6 +5,7 @@
 
   imports = [
     ./alacritty
+    ./direnv
     ./firefox
     ./fish
     ./git

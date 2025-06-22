@@ -4,6 +4,7 @@
   imports = [ ../modules/default.nix ];
   config.modules = {
     alacritty.enable = true;
+    direnv.enable = true;
     firefox.enable = true;
     fish.enable = true;
     git.enable = true;
