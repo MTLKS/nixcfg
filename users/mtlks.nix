@@ -11,6 +11,7 @@
     i3.enable = true;
     libreoffice.enable = true;
     minecraft.enable = true;
+    obsidian.enable = true;
     pavucontrol.enable = true;
     polybar.enable = true;
     rofi.enable = true;

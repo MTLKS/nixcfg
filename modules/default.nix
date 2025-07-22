@@ -12,6 +12,7 @@
     ./i3
     ./libreoffice
     ./minecraft
+    ./obsidian
     ./pavucontrol
     ./polybar
     ./rofi
