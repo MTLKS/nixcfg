@@ -15,8 +15,6 @@
     timeout = 1;
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_6_14;
-
   networking.networkmanager.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
 

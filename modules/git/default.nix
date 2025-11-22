@@ -8,9 +8,11 @@ in {
   config = mkIf cfg.enable {
     programs.git = {
       enable = true;
-      userName = "MTLKS";
-      userEmail = "43807318+MTLKS@users.noreply.github.com";
-      extraConfig = {
+      settings = {
+        user = {
+          name = "MTLKS";
+          email = "43807318+MTLKS@users.noreply.github.com";
+        };
         init = {
           defaultBranch = "main";
         };
