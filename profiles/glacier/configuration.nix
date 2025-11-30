@@ -73,4 +73,6 @@
       dockerCompat = true;
     };
   };
+
+  programs.steam.enable = true;
 }
