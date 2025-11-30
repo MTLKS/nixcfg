@@ -9,7 +9,7 @@
 
   users.users.mtlks = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "audio" "docker" ];
+    extraGroups = [ "wheel" "networkmanager" "audio" "podman" ];
     home = "/home/mtlks";
   };
 
@@ -66,5 +66,11 @@
     defaultSession = "none+i3";
   };
 
-  virtualisation.docker.enable = true;
+  virtualisation = {
+    containers.enable = true;
+    podman = {
+      enable = true;
+      dockerCompat = true;
+    };
+  };
 }
