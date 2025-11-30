@@ -66,6 +66,11 @@
     defaultSession = "none+i3";
   };
 
+  services.ollama = {
+    enable = true;
+    acceleration = "cuda";
+  };
+
   virtualisation = {
     containers.enable = true;
     podman = {
