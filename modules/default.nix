@@ -9,6 +9,7 @@
     ./firefox
     ./fish
     ./git
+    ./gnucash
     ./i3
     ./libreoffice
     ./minecraft

@@ -8,6 +8,7 @@
     firefox.enable = true;
     fish.enable = true;
     git.enable = true;
+    gnucash.enable = true;
     i3.enable = true;
     libreoffice.enable = true;
     minecraft.enable = true;
