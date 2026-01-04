@@ -16,6 +16,7 @@
     ./pavucontrol
     ./polybar
     ./rofi
+    ./thunar
     ./vesktop
     ./vscode
   ];

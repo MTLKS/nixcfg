@@ -15,6 +15,7 @@
     pavucontrol.enable = true;
     polybar.enable = true;
     rofi.enable = true;
+    thunar.enable = true;
     vesktop.enable = true;
     vscode.enable = true;
   };

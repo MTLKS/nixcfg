@@ -66,6 +66,8 @@
     defaultSession = "none+i3";
   };
 
+  services.tumbler.enable = true;
+
   virtualisation = {
     containers.enable = true;
     podman = {
