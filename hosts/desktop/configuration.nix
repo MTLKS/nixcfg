@@ -9,8 +9,13 @@
   boot.loader = {
     grub = {
       enable = true;
-      device = "/dev/sda";
+      efiSupport = true;
+      device = "nodev";
       useOSProber = true;
+    };
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot/efi";
     };
     timeout = 1;
   };
