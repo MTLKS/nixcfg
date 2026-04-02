@@ -76,7 +76,7 @@ in {
           "Print" = "exec --no-startup-id maim --select | xclip -selection clipboard -t image/png";
         };
         startup = [
-          { command = "feh --bg-fill --no-xinerama ~/background-image"; }
+          { command = "feh --bg-fill ~/background-image"; }
           { command = "polybar bar1"; }
           { command = "polybar bar2"; }
           { command = "polybar bar3"; }
@@ -103,7 +103,117 @@ in {
     };
 
     services = {
-      picom.enable = true;
+      picom = {
+        enable = true;
+        extraConfig = ''
+          animations = (
+            {
+              triggers = [ "close" ];
+              opacity = {
+                curve = "cubic-bezier(0,1,1,1)";
+                duration = 0.1;
+                start = "window-raw-opacity-before";
+                end = 0;
+              };
+              blur-opacity = "opacity";
+              shadow-opacity = "opacity";
+              offset-x = "(1 - scale-x) / 2 * window-width";
+              offset-y = "(1 - scale-y) / 2 * window-height";
+              scale-y = {
+                curve = "cubic-bezier(0,1.3,1,1)";
+                duration = 0.2;
+                start = 1;
+                end = 0.6;
+              };
+              scale-x = 1;
+              shadow-scale-x = "scale-x";
+              shadow-scale-y = "scale-y";
+              shadow-offset-x = "offset-x";
+              shadow-offset-y = "offset-y";
+            },
+
+            {
+              triggers = [ "open" ];
+              opacity = {
+                curve = "linear";
+                duration = 0.05;
+                start = 0;
+                end = "window-raw-opacity";
+              };
+              blur-opacity = "opacity";
+              shadow-opacity = "opacity";
+              offset-x = "(1 - scale-x) / 2 * window-width";
+              offset-y = "(1 - scale-y) / 2 * window-height";
+              scale-y = {
+                curve = "cubic-bezier(0,1.3,1,1)";
+                duration = 0.3;
+                start = 0.6;
+                end = 1;
+              };
+              scale-x = 1;
+              shadow-scale-x = "scale-x";
+              shadow-scale-y = "scale-y";
+              shadow-offset-x = "offset-x";
+              shadow-offset-y = "offset-y";
+            },
+
+            {
+              triggers = [ "show" ];
+              opacity = {
+                curve = "linear";
+                duration = 0.1;
+                start = 0;
+                end = "window-raw-opacity";
+              };
+            },
+
+            {
+              triggers = [ "hide" ];
+              opacity = {
+                curve = "linear";
+                duration = 0.2;
+                start = "window-raw-opacity-before";
+                end = 0;
+              };
+              blur-opacity = "opacity";
+              shadow-opacity = "opacity";
+            },
+
+            {
+              triggers = [ "geometry" ];
+              scale-x = {
+                curve = "cubic-bezier(0,0,0,1.28)";
+                duration = 0.22;
+                start = "window-width-before / window-width";
+                end = 1;
+              };
+              scale-y = {
+                curve = "cubic-bezier(0,0,0,1.28)";
+                duration = 0.22;
+                start = "window-height-before / window-height";
+                end = 1;
+              };
+              offset-x = {
+                curve = "cubic-bezier(0,0,0,1.28)";
+                duration = 0.22;
+                start = "window-x-before - window-x";
+                end = 0;
+              };
+              offset-y = {
+                curve = "cubic-bezier(0,0,0,1.28)";
+                duration = 0.22;
+                start = "window-y-before - window-y";
+                end = 0;
+              };
+
+              shadow-scale-x = "scale-x";
+              shadow-scale-y = "scale-y";
+              shadow-offset-x = "offset-x";
+              shadow-offset-y = "offset-y";
+            }
+          );
+        '';
+      };
     };
 
     home.packages = with pkgs; [
