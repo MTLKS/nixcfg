@@ -27,7 +27,7 @@ in {
           "terminal.integrated.fontFamily" = "'CommitMono Nerd Font', monospace";
           "terminal.integrated.fontWeightBold" = "bold";
           "window.titleBarStyle" = "custom";
-          "workbench.colorTheme" = "Default Dark+";
+          "workbench.colorTheme" = "Dark+";
           "workbench.colorCustomizations" = {
             "activityBar.background" = "#100F0F";
             "activityBar.border" = "#100F0F";

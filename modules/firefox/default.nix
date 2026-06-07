@@ -6,6 +6,9 @@ let
 in {
   options.modules.firefox = { enable = mkEnableOption "firefox"; };
   config = mkIf cfg.enable {
-    programs.firefox.enable = true;
+    programs.firefox = {
+      enable = true;
+      configPath = "${config.xdg.configHome}/mozilla/firefox";
+    };
   };
 }
