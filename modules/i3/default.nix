@@ -44,12 +44,6 @@ in {
           "${mod}+Ctrl+Left" = "move workspace to output left";
           "${mod}+Ctrl+Right" = "move workspace to output right";
 
-          "${mod}+a" = "focus parent";
-          "${mod}+x" = "exec thunar";
-          "${mod}+c" = "exec LC_MONETARY=ms_MY.utf8 rofi -show calc -modi calc -no-show-match -no-sort -no-persist-history -kb-accept-entry Control+Return -kb-accept-custom Return -calc-command \"echo -n '{result}' | xclip -selection clipboard\"";
-          "${mod}+f" = "fullscreen toggle";
-          "${mod}+q" = "floating toggle";
-
           "${mod}+1" = "workspace number 1";
           "${mod}+2" = "workspace number 2";
           "${mod}+3" = "workspace number 3";
@@ -70,8 +64,16 @@ in {
           "${mod}+Shift+8" = "move container to workspace number 8";
           "${mod}+Shift+9" = "move container to workspace number 9";
 
-          "${mod}+Shift+c" = "reload";
+          "${mod}+a" = "focus parent";
+          "${mod}+c" = "exec LC_MONETARY=ms_MY.utf8 rofi -show calc -modi calc -no-show-match -no-sort -no-persist-history -kb-accept-entry Control+Return -kb-accept-custom Return -calc-command \"echo -n '{result}' | xclip -selection clipboard\"";
+          "${mod}+f" = "fullscreen toggle";
+          "${mod}+n" = "exec redshift -P -O 4500K";
+          "${mod}+q" = "floating toggle";
           "${mod}+r" = "mode resize";
+          "${mod}+x" = "exec thunar";
+
+          "${mod}+Shift+c" = "reload";
+          "${mod}+Shift+n" = "exec redshift -x";
 
           "Print" = "exec --no-startup-id maim --select | xclip -selection clipboard -t image/png";
         };
@@ -220,6 +222,7 @@ in {
     home.packages = with pkgs; [
       dconf #gtk
       maim
+      redshift
       xclip
     ];
   };
